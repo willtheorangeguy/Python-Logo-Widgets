@@ -1,5 +1,5 @@
 """
-(C) 2016 willtheorangeguy. All rights reserved.
+(C) 2016 - 2018 willtheorangeguy / William Vandergraaf. All rights reserved.
 """
 #Import Statements
 from tkinter import *

@@ -9,4 +9,8 @@ Python Powered:
 
 ![Python Powered Logo](https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/pythonpoweredlengthgif.gif)
 
-© Both logos are copyright the Python Software Foundation.
+## Maintainers:
+- @willtheorangeguy
+
+Images copyright the Python Software Foundation.
+Project © 2018 William Vandergraaf

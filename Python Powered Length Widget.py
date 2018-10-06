@@ -16,5 +16,3 @@ label = Label(window, image = img, bg = "black") # Edit border as needed
 label.pack(side = TOP) # Edit pack as needed
 
 window.mainloop()
-
-                  

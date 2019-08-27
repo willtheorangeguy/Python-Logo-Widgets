@@ -1,4 +1,4 @@
-# Python-Logo-Widgets
+# Python Logo Widgets
 A group of widgets that show the Python or Python Powered logos, that can easily be added to your Python GUI! They're great for giving atrubution and to show your love and support for Python and the Python community!
 
 Python Logo:

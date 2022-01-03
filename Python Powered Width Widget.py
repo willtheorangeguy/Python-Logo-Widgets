@@ -1,5 +1,5 @@
 """
-(C) 2016 - 2019 William Vandergraaf. All rights reserved.
+(C) 2016 - 2022. All rights reserved.
 """
 #Import Statements
 from tkinter import *

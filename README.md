@@ -16,4 +16,4 @@ Either copy the code from the `Python Logo Widget.py` file for just the plain ol
 - [@willtheorangeguy](https://github.com/willtheorangeguy)
 
 Images copyright the Python Software Foundation.
-Project © 2019 willtheorangeguy
+Project © 2019-2022 willtheorangeguy

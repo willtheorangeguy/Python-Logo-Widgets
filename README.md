@@ -39,9 +39,11 @@
 </p>
 
 <!-- Screenshot(s) -->
-![screenshot](https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonlogo.png)
-![screenshot](https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonpoweredheight.png)
-![screenshot](https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonpoweredwidth.png)
+<div align="center">
+  <img alt="Python Logo Widget" src="https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonlogo.png">
+  <img alt="Python Powered Height Widget" src="https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonpoweredheight.png">
+  <img alt="Python Powered Width Widget" src="https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonpoweredwidth.png">
+</div>
 
 ## Key Features
 

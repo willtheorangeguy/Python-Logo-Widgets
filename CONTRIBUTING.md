@@ -34,7 +34,7 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 
 ### Did you fix whitespace, format code, or make a purely cosmetic patch?
 
-- Changes that are cosmetic in nature and do not add anything substantial to the stability, functionality, or testability of Python-Logo-Widgets are still accepted! Just follow the same instructions as above.
+- Changes that are cosmetic in nature and do not add anything substantial to the stability, functionality, or testability of Python Logo Widgets are still accepted! Just follow the same instructions as above.
 
 ### Do you intend to add a new feature or change an existing one?
 
@@ -43,7 +43,7 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 
 ### Do you have questions about the source code?
 
-- Ask any question about how to use Python-Logo-Widgets on our [Discord](https://discord.gg/eAZZJzhHrW).
+- Ask any question about how to use Python Logo Widgets on our [Discord](https://discord.gg/eAZZJzhHrW).
 - If it does not get answered, open an [issue](https://github.com/willtheorangeguy/Python-Logo-Widgets/issues/new).  
 
 ## Coding Conventions

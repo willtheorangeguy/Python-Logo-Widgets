@@ -19,6 +19,8 @@
   <img alt="Pylint State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pylint.yml/badge.svg">
   <!-- CodeQL -->
   <img alt="CodeQL State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/codeql.yml/badge.svg">
+  <!-- Gitleaks -->
+  <img alt="Gitleaks State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/gitleaks.yml/badge.svg">
   <!-- Version -->
   <img alt="GitHub Version" src="https://img.shields.io/github/v/release/willtheorangeguy/Python-Logo-Widgets">
   <!-- Issues -->

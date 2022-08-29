@@ -12,7 +12,13 @@
 <!-- Badges -->
 <div align="center">
   <!-- Stability -->
-  <img alt="GitHub Actions State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pylint.yml/badge.svg">
+  <img alt="Test State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/test.yml/badge.svg">
+  <!-- Stability -->
+  <img alt="Build State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/build.yml/badge.svg">
+  <!-- Stability -->
+  <img alt="Pylint State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pylint.yml/badge.svg">
+  <!-- CodeQL -->
+  <img alt="CodeQL State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/codeql.yml/badge.svg">
   <!-- Version -->
   <img alt="GitHub Version" src="https://img.shields.io/github/v/release/willtheorangeguy/Python-Logo-Widgets">
   <!-- Issues -->
@@ -107,7 +113,7 @@ If you want to save program space, you do not need to copy all of the code and i
 
 Copy and import only the files that are necessary for the widget your project requires.
 
-Customizing the logo and widget sizes can be found in [`CUSTOMIZATION.md`](https://github.com/willtheorangeguy/Python-Logo-Widgets/tree/main/docs). Hard-coding the widgets into your project can be found in [`USAGE.md`](https://github.com/willtheorangeguy/Python-Logo-Widgets/tree/main/docs). More documentation is available in the **[Documentation](https://github.com/willtheorangeguy/Python-Logo-Widgets/tree/main/docs)** and on the **[Wiki](https://github.com/willtheorangeguy/Python-Logo-Widgets/wiki)**. If more support is required, please open a **[GitHub Discussion](https://github.com/willtheorangeguy/Python-Logo-Widgets/discussions/new)** or join our **[Discord](https://discord.gg/eAZZJzhHrW)**.
+Customizing the logo and widget sizes can be found in [`CUSTOMIZATION`](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/CUSTOMIZATION.md). Hard-coding the widgets into your project can be found in [`USAGE`](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/USAGE.md). More documentation is available in the **[Documentation](https://github.com/willtheorangeguy/Python-Logo-Widgets/tree/main/docs)** and on the **[Wiki](https://github.com/willtheorangeguy/Python-Logo-Widgets/wiki)**. If more support is required, please open a **[GitHub Discussion](https://github.com/willtheorangeguy/Python-Logo-Widgets/discussions/new)** or join our **[Discord](https://discord.gg/eAZZJzhHrW)**.
 
 ## Contributing
 
@@ -126,7 +132,7 @@ This software uses the following open source packages, projects, services or web
 <!-- Credits Table -->
 <table>
   <tr>
-    <th align="center"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="150" height="150" alt="GitHub"/></th>
+    <th align="center"><img src="https://applets.imgix.net/https%3A%2F%2Fassets.ifttt.com%2Fimages%2Fchannels%2F2107379463%2Ficons%2Fmonochrome_large.png?w=240&h=240&s=8a19bbc158996d098e2fb18310ba7f33" width="150" height="150" alt="GitHub"/></th>
     <th align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/182px-Python-logo-notext.svg.png" width="150" height="150" alt="PSF"/></th>
     <th align="center"><img src="https://pyinstaller.readthedocs.io/en/v4.2/_static/pyinstaller-draft1a.ico" width="150" height="150" alt="PyInstaller"/></th>
   </tr>

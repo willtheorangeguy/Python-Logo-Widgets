@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-Last updated: March 01, 2022.
+Last updated: August 29, 2022.
 
 Please read these terms and conditions carefully before using Python Logo Widgets.
 
@@ -17,7 +17,7 @@ For the purposes of these Terms and Conditions:
 - **Application** means the software program provided by @willtheorangeguy downloaded by you on any electronic device, named Python Logo Widgets.
 - **Application Store** means the digital distribution service operated and developed by Apple Inc. (Apple App Store), Google Inc. (Google Play Store) or Microsoft Inc (GitHub), in which the Application has been downloaded.
 - **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
-- **Country** refers to: British Columbia,  Canada
+- **Country** refers to: British Columbia, Canada.
 - **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to the developer named as @willtheorangeguy.
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 - **Service** refers to the Application.
@@ -96,4 +96,4 @@ By continuing to access or use Our Service after those revisions become effectiv
 
 If you have any questions about these Terms and Conditions, You can contact us:
 
-- By visiting this page on our website: [github.com/willtheorangeguy/Python-Logo-Widgets](github.com/willtheorangeguy/Python-Logo-Widgets).
+- Via our Discord: [https://discord.gg/eAZZJzhHrW](https://discord.gg/eAZZJzhHrW).

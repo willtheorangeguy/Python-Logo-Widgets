@@ -30,3 +30,4 @@ jobs:
       with: 
         github-token: ${{secrets.GITHUB_TOKEN}}
         command: pipenv run smelly-python -d src
+        

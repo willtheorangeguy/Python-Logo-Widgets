@@ -1,6 +1,6 @@
 """
 Python Logo Widget Samples
-Copyright (C) 2016-2022  @willtheorangeguy
+Copyright (C) 2016-2022 @willtheorangeguy
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -16,15 +16,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
 # Import Statements
-from tkinter import *
-from logo_widget import *
-from python_powered_length_widget import *
-from python_powered_width_widget import *
+from logo import *
+from length import *
+from width import *
 
 def main():
-    logo()
-    python_powered_length()
-    python_powered_width()
+    logo_widget()
+    length_widget()
+    width_widget()
 
 if __name__ == "__main__":
     main()

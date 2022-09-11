@@ -1,6 +1,6 @@
 """
 Python Logo Widget
-Copyright (C) 2016-2022  @willtheorangeguy
+Copyright (C) 2016-2022 @willtheorangeguy
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,20 +18,20 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # Import Statements
 from tkinter import *
 
-def logo():
+def logo_widget():
     # Window Statements
     window = Tk()
     window.title("Python Logo Widget") # Edit title as needed
 
     # Image Statements
-    img = PhotoImage(file = "logos/pythonlogogif.gif") # Edit image as needed
+    img = PhotoImage(file = "imgs/logo.gif") # Edit image as needed
     label = Label(window, image = img, bg = "black") # Edit border as needed
 
     # Pack Statements
-    label.pack(side = TOP) # Edit pack as needed
+    label.pack(side = BOTTOM) # Edit pack as needed
 
     # Sustain Window
     window.mainloop()
 
 if __name__ == "__main__":
-    logo()
+    logo_widget()

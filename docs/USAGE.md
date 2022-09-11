@@ -1,14 +1,6 @@
 # Python Logo Widgets Usage
 
-To install the Python Logo Widgets, you can either use an executable package (Windows), import the modules into your project or hard-code them into your project (Windows, macOS, Linux). This will require a [text editor](https://code.visualstudio.com/).
-
-Use the following table to see which files are necessary to support each widget:
-
-|        | Python Logo | Python Powered Length | Python Powered Width |
-|--------|-------------|-----------------------|----------------------|
-|Image|`pythonlogogif`|`pythonpoweredlengthgif`|`pythonpoweredwidthgif`|
-|File|`logo_widget` |`python_powered_length_widget`|`python_powered_width_widget`|
-|Function|`logo()` |`python_powered_length()`|`python_powered_width()`|
+To install the Python Logo Widgets, you can use an executable package (Windows), install from the [Python Package Index](https://pypi.org/), import the widgets into your project, or hard code the widgets into your project.
 
 ## Executable Package
 
@@ -18,72 +10,117 @@ Use the following table to see which files are necessary to support each widget:
 4. Double click on `main.exe`.
 5. Enjoy the program!
 
+## Python Package Index (`pip`)
+
+1. Download and install [Python](https://www.python.org/downloads/).
+2. Open a terminal and run the command: `pip install running-calculator`.
+3. Open your code file, and navigate to the top of your code.
+4. Add the respective `import` statement:
+    * **Python Logo:** `from python-logo-widgets.logo import *`
+    * **Python Powered Length:** `from python-logo-widgets.length import *`
+    * **Python Powered Width:** `from python-logo-widgets.width import *`
+
+5. Call each of the respective widgets:
+
+    * **Python Logo:** `logo_widget()`
+    * **Python Powered Length:** `length_widget()`
+    * **Python Powered Width:** `width_widget()`
+
+6. Save and run the file (`F5`).
+
 ## Import Modules
 
-1. Copy the `logo_widget.py`, `python_powered_length_widget.py`, `python_powered_width_widget.py` files, and `logos` folder to your project.
+1. Copy the `logo.py`, `length.py`, `width.py` files, and `imgs` folder to your project.
 2. Import each of the widgets (and `Tkinter`) into your project:
 
 ```python
 # Import Statements
 from tkinter import *
-from logo_widget import *
-from python_powered_length_widget import *
-from python_powered_width_widget import *
+from logo import *
+from length import *
+from width import *
 ```
 
 3. Call each of the respective widgets:
 
-| Python Logo | Python Powered Length | Python Powered Width |
-|-------------|-----------------------|----------------------|
-|`logo()` |`python_powered_length()`|`python_powered_width()`|
+    * **Python Logo:** `logo_widget()`
+    * **Python Powered Length:** `length_widget()`
+    * **Python Powered Width:** `width_widget()`
 
 4. Save and run the file (`F5`).
 
 ## Hard Code into Project
 
-1. Create a `logo` folder in the root directory of your program.
-2. Copy the respective image from the Python Logo Widgets `logo` folder to your program `logo` folder.
+1. Create a `imgs` folder in the root directory of your program.
+2. Copy the respective image from the Python Logo Widgets `imgs` folder to your program's `imgs` folder.
 3. Open the your code file, and navigate to the top of the code.
 4. Add the respective `import` statement:
-    * **Python Logo:** `from logo_widget import *`
-    * **Python Powered Length:** `from python_powered_length_widget import *`
-    * **Python Powered Width:** `from python_powered_width_widget import *`
+    * **Python Logo:** `from logo import *`
+    * **Python Powered Length:** `from length import *`
+    * **Python Powered Width:** `from width import *`
 5. Copy the respective function to the top of your code file, making it available everywhere else:
     * **Python Logo:**
 
     ```python
-    def logo():
+    def logo_widget():
+        # Window Statements
+        window = Tk()
+        window.title("Python Logo Widget") # Edit title as needed
+
         # Image Statements
-        img = PhotoImage(file = "logos/pythonlogogif.gif") # Edit image as needed
+        img = PhotoImage(file = "imgs/logo.gif") # Edit image as needed
         label = Label(window, image = img, bg = "black") # Edit border as needed
 
         # Pack Statements
-        label.pack(side = TOP) # Edit pack as needed
+        label.pack(side = BOTTOM) # Edit pack as needed
+
+        # Sustain Window
+        window.mainloop()
     ```
 
     * **Python Powered Length:**
 
     ```python
-    def python_powered_length():
+    def length_widget():
+        # Window Statements
+        window = Tk()
+        window.title("Python Powered Widget") # Edit title as needed
+
         # Image Statements
-        img = PhotoImage(file = "logos/pythonpoweredlengthgif.gif") # Edit image as needed
+        img = PhotoImage(file = "imgs/length.gif") # Edit image as needed
         label = Label(window, image = img, bg = "black") # Edit border as needed
 
         # Pack Statements
-        label.pack(side = TOP) # Edit pack as needed
+        label.pack(side = BOTTOM) # Edit pack as needed
+
+        # Sustain Window
+        window.mainloop()
     ```
 
     * **Python Powered Width:**
 
     ```python
-    def python_powered_width():
+    def width_widget():
+        # Window Statements
+        window = Tk()
+        window.title("Python Powered Widget") # Edit title as needed
+
         # Image Statements
-        img = PhotoImage(file = "logos/pythonpoweredwidthgif.gif") # Edit image as needed
+        img = PhotoImage(file = "imgs/width.gif") # Edit image as needed
         label = Label(window, image = img, bg = "black") # Edit border as needed
 
         # Pack Statements
-        label.pack(side = TOP) # Edit pack as needed
+        label.pack(side = BOTTOM) # Edit pack as needed
+
+        # Sustain Window
+        window.mainloop()
     ```
 
 6. Edit the `label.pack()` statement to pack it either at the `TOP`, `BOTTOM`, `LEFT` or `RIGHT` of your program window.
-7. Save and run your program (`F5`).
+7. Call each of the respective widgets:
+
+    * **Python Logo:** `logo_widget()`
+    * **Python Powered Length:** `length_widget()`
+    * **Python Powered Width:** `width_widget()`
+
+8. Save and run the file (`F5`).

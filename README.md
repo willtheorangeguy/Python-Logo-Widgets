@@ -12,9 +12,7 @@
 <!-- Badges -->
 <div align="center">
   <!-- Stability -->
-  <img alt="Test State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/test.yml/badge.svg">
-  <!-- Stability -->
-  <img alt="Build State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/build.yml/badge.svg">
+  <img alt="PyPI Build State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/push-to-pypi.yml/badge.svg">
   <!-- Stability -->
   <img alt="Pylint State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pylint.yml/badge.svg">
   <!-- CodeQL -->
@@ -61,59 +59,71 @@
 * Built-in samples.
 * Cross platform.
 
+## Key Features
+
+* Easily input distance of a run.
+* Input distance can be in marathons, half-marathons, miles, feet, kilometers and meters.
+* Easily input run time.
+* Displays speeds in meters per second and kilometers per hour.
+* Cross platform.
+
 ## Download
 
-You can **[download](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/latest) the source code** to run the script from the command line on Windows, macOS and Linux or add the images to your project. **This will require [Python](https://www.python.org/downloads/).**
-
-You can **[download](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/latest) the latest executable version** of Python Logo Widgets for Windows. **This does not require Python.**
+You can **[download](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/latest) the source code** to run the scripts from the command line on Windows, macOS and Linux. **This will require [Python](https://www.python.org/downloads/).**
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/downloads/) installed on your computer. If you would rather not use Git, you can just download the code from GitHub above. From your command line:
+To run the application, you can use [Git and the Python Interpreter](https://github.com/willtheorangeguy/Python-Logo-Widgets/main/README.md#git), which allows you to clone and edit the widgets, or [`pip`](https://github.com/willtheorangeguy/Python-Logo-Widgets/main/README.md#pip) to import the widgets into your projects.
+
+### Git
+
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/downloads/) installed on your computer. If you would rather not use Git, you can just download the script from GitHub above. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/willtheorangeguy/Python-Logo-Widgets.git
+$ git clone https://github.com/willtheorangeguy/Python-Logo-Widgets
 
 # Go into the repository
 $ cd Python-Logo-Widgets
 
-# Run the samples
+# Run the Demo Window
 $ python main.py
+```
+
+### `pip`
+
+You can install the program from the [Python Package Index](https://pypi.org/project/Python-Logo-Widgets/) through `pip`.
+
+```bash
+# Install via pip
+$ pip install Python-Logo-Widgets
+
+# Run the Demo Window
+$ Python-Logo-Widgets
 ```
 
 **To add the widgets to your project, just import the code files!** Follow these instructions:
 
-1. Copy the `logo_widget.py`, `python_powered_length_widget.py`, `python_powered_width_widget.py` files, and `logos` folder to your project.
+1. Copy the `logo.py`, `length.py`, `width.py` files, and `imgs` folder to your project.
 2. Import each of the widgets (and `Tkinter`) into your project:
 
 ```python
 # Import Statements
 from tkinter import *
-from logo_widget import *
-from python_powered_length_widget import *
-from python_powered_width_widget import *
+from logo import *
+from length import *
+from width import *
 ```
 
 3. Call each of the respective widgets:
 
 | Python Logo | Python Powered Length | Python Powered Width |
 |-------------|-----------------------|----------------------|
-|`logo()` |`python_powered_length()`|`python_powered_width()`|
+|`logo_widget()`|`length_widget()`|`width_widget()`|
 
-4. Save and run the file (`F5`). You're all set!
+4. Save and run the file. You're all set!
 
 ## Support
-
-If you want to save program space, you do not need to copy all of the code and image files, or import all of the widgets into your application. The following table describes the required resources for each widget:
-
-|        | Python Logo | Python Powered Length | Python Powered Width |
-|--------|-------------|-----------------------|----------------------|
-|Image|`pythonlogogif`|`pythonpoweredlengthgif`|`pythonpoweredwidthgif`|
-|File|`logo_widget` |`python_powered_length_widget`|`python_powered_width_widget`|
-|Function|`logo()` |`python_powered_length()`|`python_powered_width()`|
-
-Copy and import only the files that are necessary for the widget your project requires.
 
 Customizing the logo and widget sizes can be found in [`CUSTOMIZATION`](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/CUSTOMIZATION.md). Hard-coding the widgets into your project can be found in [`USAGE`](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/USAGE.md). More documentation is available in the **[Documentation](https://github.com/willtheorangeguy/Python-Logo-Widgets/tree/main/docs)** and on the **[Wiki](https://github.com/willtheorangeguy/Python-Logo-Widgets/wiki)**. If more support is required, please open a **[GitHub Discussion](https://github.com/willtheorangeguy/Python-Logo-Widgets/discussions/new)** or join our **[Discord](https://discord.gg/eAZZJzhHrW)**.
 

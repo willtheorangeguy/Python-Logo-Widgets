@@ -4,7 +4,7 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "Python-Logo-Widgets"
-version = "2.2.0"
+version = "2.2.1"
 authors = [
   { name="willtheorangeguy" },
 ]

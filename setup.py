@@ -6,7 +6,7 @@ def readme():
 
 setup(
 	name='Python-Logo-Widgets',
-	version='2.2.0',
+	version='2.2.1',
     description='A group of widgets showing the Python logos, that can easily be added to your Python GUI code!',
     long_description=readme(),
     classifiers=[

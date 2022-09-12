@@ -1,5 +1,11 @@
 # Changelog
 
+## [v2.2.2](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/tag/v2.2.2)
+
+### Changed
+
+- Refactor PyPI package
+
 ## [v2.2.1](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/tag/v2.2.1)
 
 ### Changed

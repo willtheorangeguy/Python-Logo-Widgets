@@ -23,3 +23,9 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/willtheorangeguy/Python-Logo-Widgets"
 "Bug Tracker" = "https://github.com/willtheorangeguy/Python-Logo-Widgets/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["imgs"]

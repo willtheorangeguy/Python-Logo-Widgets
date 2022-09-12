@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def readme():
     with open('README.md') as f:
@@ -19,6 +19,10 @@ setup(
     keywords='logo powered widgets gui',
     url='https://github.com/willtheorangeguy/Python-Logo-Widgets',
     author='willtheorangeguy',
+    packages=find_packages(where="imgs"),
+    package_dir={"": "imgs"},
+    include_package_data=True,
+    py_modules = ['length', 'width', 'logo', 'main'],
     entry_points={
         'console_scripts': [
             'python-logo-widgets=main:main'

@@ -16,26 +16,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
 # Import Statements
+from tkinter import *
 from logo import *
 from length import *
 from width import *
 
-def main():
+def widgets():
     logo_widget()
     length_widget()
     width_widget()
 
 if __name__ == "__main__":
-    main()
-
-# For PyInstaller
-import sys
-
-if getattr(sys, 'frozen', False):
-    image = PhotoImage(file=os.path.join(sys._MEIPASS, "imgs/logo.gif"))
-    image = PhotoImage(file=os.path.join(sys._MEIPASS, "imgs/length.gif"))
-    image = PhotoImage(file=os.path.join(sys._MEIPASS, "imgs/width.gif"))
-else:
-    image = PhotoImage(file="imgs/logo.gif")
-    image = PhotoImage(file="imgs/length.gif")
-    image = PhotoImage(file="imgs/width.gif")
+    widgets()

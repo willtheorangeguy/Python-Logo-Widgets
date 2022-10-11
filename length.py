@@ -18,20 +18,22 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # Import Statements
 from tkinter import *
 
+
 def length_widget():
     # Window Statements
     window = Tk()
-    window.title("Python Powered Widget") # Edit title as needed
+    window.title("Python Powered Widget")  # Edit title as needed
 
     # Image Statements
-    img = PhotoImage(file = "imgs/length.gif") # Edit image as needed
-    label = Label(window, image = img, bg = "black") # Edit border as needed
+    img = PhotoImage(file="imgs/length.gif")  # Edit image as needed
+    label = Label(window, image=img, bg="black")  # Edit border as needed
 
     # Pack Statements
-    label.pack(side = BOTTOM) # Edit pack as needed
+    label.pack(side=BOTTOM)  # Edit pack as needed
 
     # Sustain Window
     window.mainloop()
+
 
 if __name__ == "__main__":
     length_widget()

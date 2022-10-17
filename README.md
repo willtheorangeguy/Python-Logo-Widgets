@@ -59,14 +59,6 @@
 * Built-in samples.
 * Cross platform.
 
-## Key Features
-
-* Easily input distance of a run.
-* Input distance can be in marathons, half-marathons, miles, feet, kilometers and meters.
-* Easily input run time.
-* Displays speeds in meters per second and kilometers per hour.
-* Cross platform.
-
 ## Download
 
 You can **[download](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/latest) the source code** to run the scripts from the command line on Windows, macOS and Linux. **This will require [Python](https://www.python.org/downloads/).**

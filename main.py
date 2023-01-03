@@ -17,8 +17,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Import Statements
 from tkinter import *
-from logo import *
+
 from length import *
+from logo import *
 from width import *
 
 

@@ -10,8 +10,10 @@ def readme():
 setup(
     name="Python-Logo-Widgets",
     version="2.2.2",
-    description=("A group of widgets showing the Python logos,"
-                 " that can easily be added to your Python GUI code!"),
+    description=(
+        "A group of widgets showing the Python logos,"
+        " that can easily be added to your Python GUI code!"
+    ),
     long_description=readme(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",

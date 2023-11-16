@@ -23,6 +23,7 @@ from width import *
 
 
 def widgets():
+    """ Load All Widgets """
     logo_widget()
     length_widget()
     width_widget()

@@ -19,6 +19,7 @@ from tkinter import *
 
 
 def logo_widget():
+    """ Logo Widget """
     # Window Statements
     window = Tk()
     window.title("Python Logo Widget")  # Edit title as needed

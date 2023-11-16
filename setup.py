@@ -2,14 +2,15 @@ from setuptools import setup, find_packages
 
 
 def readme():
-    with open("README.md") as f:
+    """Read the README.md file and use it as the long description."""
+    with open("README.md", encoding="utf-8") as f:
         return f.read()
 
 
 setup(
     name="Python-Logo-Widgets",
     version="2.2.2",
-    description=("A group of widgets showing the Python logos,"\
+    description=("A group of widgets showing the Python logos,"
                  " that can easily be added to your Python GUI code!"),
     long_description=readme(),
     classifiers=[

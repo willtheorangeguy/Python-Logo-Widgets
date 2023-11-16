@@ -19,6 +19,7 @@ from tkinter import *
 
 
 def length_widget():
+    """ Length Widget """
     # Window Statements
     window = Tk()
     window.title("Python Powered Widget")  # Edit title as needed

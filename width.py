@@ -19,7 +19,7 @@ from tkinter import *
 
 
 def width_widget():
-    """ Width Widget """
+    """Width Widget"""
     # Window Statements
     window = Tk()
     window.title("Python Powered Widget")  # Edit title as needed

@@ -1,3 +1,3 @@
-# Initialize PyPI Package
+"""Initialize PyPI Package"""
 
 __all__ = []

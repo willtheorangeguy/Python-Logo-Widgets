@@ -21,6 +21,7 @@ from length import length_widget
 from logo import logo_widget
 from width import width_widget
 
+
 def widgets():
     """Load All Widgets"""
     logo_widget()

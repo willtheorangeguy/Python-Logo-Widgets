@@ -14,6 +14,8 @@
   <!-- Stability -->
   <img alt="PyPI Build State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/push-to-pypi.yml/badge.svg">
   <!-- Stability -->
+  <img alt="PyTest State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pytest.yml/badge.svg">
+  <!-- Stability -->
   <img alt="Pylint State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pylint.yml/badge.svg">
   <!-- CodeQL -->
   <img alt="CodeQL State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/codeql.yml/badge.svg">

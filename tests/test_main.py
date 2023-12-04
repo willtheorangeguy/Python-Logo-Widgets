@@ -1,5 +1,5 @@
 """This is a test file for the Python-Logo-Widgets package."""
-# pylint: disable=locally-disabled, wrong-import-position
+# pylint: disable=locally-disabled, wrong-import-position, import-error
 
 import sys
 import os

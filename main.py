@@ -15,11 +15,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 # Import Statements
-from tkinter import *
-
-from length import *
-from logo import *
-from width import *
+from length import length_widget
+from logo import logo_widget
+from width import width_widget
 
 
 def widgets():

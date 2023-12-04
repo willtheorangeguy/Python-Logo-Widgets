@@ -1,3 +1,5 @@
+"""Setup file for the Python-Logo-Widgets package."""
+
 from setuptools import setup, find_packages
 
 

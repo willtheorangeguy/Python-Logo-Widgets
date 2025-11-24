@@ -1,4 +1,5 @@
 """Setup file for the Python-Logo-Widgets package."""
+
 # pylint: disable=locally-disabled, invalid-name, import-error
 
 from setuptools import setup, find_packages

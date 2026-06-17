@@ -1,31 +1,44 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=61.0", "wheel"]
 
 [project]
 name = "Python-Logo-Widgets"
-version = "2.2.21"
+version = "3.0.0"
 authors = [
-  { name="willtheorangeguy" },
+  { name = "willtheorangeguy" },
 ]
-description = "A group of widgets showing the Python logos, that can easily be added to your Python GUI code!"
+description = "Tkinter widgets displaying Python logos, easily embeddable in your GUI applications."
 readme = "README.md"
-license = { file="LICENSE.md" }
+license = { file = "LICENSE.md" }
 requires-python = ">=3.9"
 classifiers = [
-    'Development Status :: 5 - Production/Stable',
-    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-    'Natural Language :: English',
-    'Operating System :: OS Independent',
-    'Topic :: Software Development :: Widget Sets',
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Widget Sets",
 ]
+keywords = ["logo", "powered", "widgets", "gui", "tkinter"]
 
 [project.urls]
 "Homepage" = "https://github.com/willtheorangeguy/Python-Logo-Widgets"
 "Bug Tracker" = "https://github.com/willtheorangeguy/Python-Logo-Widgets/issues"
 
-[tool.setuptools]
-include-package-data = true
+[project.scripts]
+python-logo-widgets = "python_logo_widgets._demo:demo"
 
 [tool.setuptools.packages.find]
-where = ["imgs"]
+include = ["python_logo_widgets*"]
+
+[tool.setuptools.package-data]
+"python_logo_widgets.imgs" = ["*.gif"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

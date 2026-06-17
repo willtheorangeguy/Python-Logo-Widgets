@@ -1,126 +1,84 @@
 # Python Logo Widgets Usage
 
-To install the Python Logo Widgets, you can use an executable package (Windows), install from the [Python Package Index](https://pypi.org/), import the widgets into your project, or hard code the widgets into your project.
+## Install via `pip`
 
-## Executable Package
-
-1. To run the executable package, download the latest `.zip` file from [GitHub Releases](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/latest) page.
-2. Extract the `.zip` file using a program like [7-Zip](https://www.7-zip.org/).
-3. _(Optional) Move the files to `C:\Program Files` and create a shortcut._
-4. Double click on `main.exe`.
-5. Enjoy the program!
-
-## Python Package Index (`pip`)
-
-1. Download and install [Python](https://www.python.org/downloads/).
-2. Open a terminal and run the command: `pip install running-calculator`.
-3. Open your code file, and navigate to the top of your code.
-4. Add the respective `import` statement:
-    * **Python Logo:** `from python-logo-widgets.logo import *`
-    * **Python Powered Length:** `from python-logo-widgets.length import *`
-    * **Python Powered Width:** `from python-logo-widgets.width import *`
-
-5. Call each of the respective widgets:
-
-    * **Python Logo:** `logo_widget()`
-    * **Python Powered Length:** `length_widget()`
-    * **Python Powered Width:** `width_widget()`
-
-6. Save and run the file (`F5`).
-
-## Import Modules
-
-1. Copy the `logo.py`, `length.py`, `width.py` files, and `imgs` folder to your project.
-2. Import each of the widgets (and `Tkinter`) into your project:
-
-```python
-# Import Statements
-from tkinter import *
-from logo import *
-from length import *
-from width import *
+```bash
+pip install Python-Logo-Widgets
 ```
 
-3. Call each of the respective widgets:
+## Embed in Your Application
 
-    * **Python Logo:** `logo_widget()`
-    * **Python Powered Length:** `length_widget()`
-    * **Python Powered Width:** `width_widget()`
+Import the widget classes and add them to your `tkinter` window:
 
-4. Save and run the file (`F5`).
+```python
+import tkinter as tk
+from python_logo_widgets import LogoWidget, PoweredByLengthWidget, PoweredByWidthWidget
 
-## Hard Code into Project
+root = tk.Tk()
+root.title("My Application")
 
-1. Create a `imgs` folder in the root directory of your program.
-2. Copy the respective image from the Python Logo Widgets `imgs` folder to your program's `imgs` folder.
-3. Open the your code file, and navigate to the top of the code.
-4. Add the respective `import` statement:
-    * **Python Logo:** `from logo import *`
-    * **Python Powered Length:** `from length import *`
-    * **Python Powered Width:** `from width import *`
-5. Copy the respective function to the top of your code file, making it available everywhere else:
-    * **Python Logo:**
+# Add any combination of widgets
+logo = LogoWidget(root, bg="white")
+logo.pack(pady=10)
 
-    ```python
-    def logo_widget():
-        # Window Statements
-        window = Tk()
-        window.title("Python Logo Widget") # Edit title as needed
+powered = PoweredByWidthWidget(root)
+powered.pack(side=tk.BOTTOM)
 
-        # Image Statements
-        img = PhotoImage(file = "imgs/logo.gif") # Edit image as needed
-        label = Label(window, image = img, bg = "black") # Edit border as needed
+root.mainloop()
+```
 
-        # Pack Statements
-        label.pack(side = BOTTOM) # Edit pack as needed
+### Available Widgets
 
-        # Sustain Window
-        window.mainloop()
-    ```
+| Widget Class | Image | Description |
+|---|---|---|
+| `LogoWidget` | `logo.gif` | The Python logo |
+| `PoweredByLengthWidget` | `length.gif` | "Python Powered" tall badge |
+| `PoweredByWidthWidget` | `width.gif` | "Python Powered" wide badge |
 
-    * **Python Powered Length:**
+### Parameters
 
-    ```python
-    def length_widget():
-        # Window Statements
-        window = Tk()
-        window.title("Python Powered Widget") # Edit title as needed
+All widgets accept:
 
-        # Image Statements
-        img = PhotoImage(file = "imgs/length.gif") # Edit image as needed
-        label = Label(window, image = img, bg = "black") # Edit border as needed
+- **`parent`** — The parent `tkinter` widget (required).
+- **`bg`** — Background color for the image label (default: `"black"`).
+- **`**kwargs`** — Any additional keyword arguments are passed to `tk.Frame`.
 
-        # Pack Statements
-        label.pack(side = BOTTOM) # Edit pack as needed
+### Layout
 
-        # Sustain Window
-        window.mainloop()
-    ```
+The widgets are `tkinter.Frame` subclasses, so you can use any geometry manager:
 
-    * **Python Powered Width:**
+```python
+# Using pack
+LogoWidget(root).pack(side=tk.TOP, pady=5)
 
-    ```python
-    def width_widget():
-        # Window Statements
-        window = Tk()
-        window.title("Python Powered Widget") # Edit title as needed
+# Using grid
+LogoWidget(root).grid(row=0, column=0, padx=10)
 
-        # Image Statements
-        img = PhotoImage(file = "imgs/width.gif") # Edit image as needed
-        label = Label(window, image = img, bg = "black") # Edit border as needed
+# Using place
+LogoWidget(root).place(x=50, y=50)
+```
 
-        # Pack Statements
-        label.pack(side = BOTTOM) # Edit pack as needed
+## Standalone Demo
 
-        # Sustain Window
-        window.mainloop()
-    ```
+To see all three widgets in a demo window:
 
-6. Edit the `label.pack()` statement to pack it either at the `TOP`, `BOTTOM`, `LEFT` or `RIGHT` of your program window.
-7. Call each of the respective widgets:
+```bash
+# Command line
+python-logo-widgets
 
-    * **Python Logo:** `logo_widget()`
-    * **Python Powered Length:** `length_widget()`
-    * **Python Powered Width:** `width_widget()`
+# As a module
+python -m python_logo_widgets
+```
 
-8. Save and run the file (`F5`).
+## Legacy Standalone Functions
+
+For backward compatibility, the old standalone functions are still available:
+
+```python
+from python_logo_widgets import logo_widget, length_widget, width_widget
+
+# Each opens its own window with mainloop()
+logo_widget()
+```
+
+These create their own `Tk()` root window and call `mainloop()`, so they cannot be embedded in an existing application.

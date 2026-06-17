@@ -57,8 +57,9 @@
 
 * High quality images.
 * Easy to integrate into a `Tkinter` GUI project.
-* Available as code or as a function.
-* Built-in samples.
+* Embeddable `tkinter.Frame` widgets — use them in your own windows.
+* Standalone demo mode.
+* Installable via `pip`.
 * Cross platform.
 
 ## Download
@@ -67,11 +68,49 @@ You can **[download](https://github.com/willtheorangeguy/Python-Logo-Widgets/rel
 
 ## How To Use
 
-To run the application, you can use [Git and the Python Interpreter](https://github.com/willtheorangeguy/Python-Logo-Widgets/main/README.md#git), which allows you to clone and edit the widgets, or [`pip`](https://github.com/willtheorangeguy/Python-Logo-Widgets/main/README.md#pip) to import the widgets into your projects.
+### Install
 
-### Git
+```bash
+pip install Python-Logo-Widgets
+```
 
-To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/downloads/) installed on your computer. If you would rather not use Git, you can just download the script from GitHub above. From your command line:
+### Embed in Your Application
+
+```python
+import tkinter as tk
+from python_logo_widgets import LogoWidget, PoweredByLengthWidget, PoweredByWidthWidget
+
+root = tk.Tk()
+root.title("My App")
+
+# Add any combination of widgets to your window
+LogoWidget(root, bg="white").pack(pady=10)
+PoweredByWidthWidget(root).pack(side=tk.BOTTOM)
+
+root.mainloop()
+```
+
+Available widgets:
+
+| Widget Class | Image |
+|---|---|
+| `LogoWidget` | Python logo |
+| `PoweredByLengthWidget` | "Python Powered" tall badge |
+| `PoweredByWidthWidget` | "Python Powered" wide badge |
+
+Each widget accepts a `parent` widget and an optional `bg` parameter (default `"black"`).
+
+### Run the Demo
+
+```bash
+# Via the command line entry point
+python-logo-widgets
+
+# Or as a module
+python -m python_logo_widgets
+```
+
+### Git (Development)
 
 ```bash
 # Clone this repository
@@ -80,42 +119,12 @@ $ git clone https://github.com/willtheorangeguy/Python-Logo-Widgets
 # Go into the repository
 $ cd Python-Logo-Widgets
 
-# Run the Demo Window
-$ python main.py
+# Install in development mode
+$ pip install -e .
+
+# Run the demo
+$ python -m python_logo_widgets
 ```
-
-### `pip`
-
-You can install the program from the [Python Package Index](https://pypi.org/project/Python-Logo-Widgets/) through `pip`.
-
-```bash
-# Install via pip
-$ pip install Python-Logo-Widgets
-
-# Run the Demo Window
-$ Python-Logo-Widgets
-```
-
-**To add the widgets to your project, just import the code files!** Follow these instructions:
-
-1. Copy the `logo.py`, `length.py`, `width.py` files, and `imgs` folder to your project.
-2. Import each of the widgets (and `Tkinter`) into your project:
-
-```python
-# Import Statements
-from tkinter import *
-from logo import *
-from length import *
-from width import *
-```
-
-3. Call each of the respective widgets:
-
-| Python Logo | Python Powered Length | Python Powered Width |
-|-------------|-----------------------|----------------------|
-|`logo_widget()`|`length_widget()`|`width_widget()`|
-
-4. Save and run the file. You're all set!
 
 ## Support
 

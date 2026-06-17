@@ -1,27 +1,41 @@
 # Python Logo Widgets Customization
 
-You can easily update and customize the Python Logo Widgets. This will require a [text editor](https://code.visualstudio.com/).
+## Change Background Color
 
-## Change the Window Title
+Pass the `bg` parameter when creating a widget:
 
-1. Open the respective Python file.
-2. Navigate to the line beginning with `window.title`.
-3. Edit the text between the `" "` with the new window title.
-4. Save and run the program (`F5`).
+```python
+from python_logo_widgets import LogoWidget
+
+# White background
+LogoWidget(root, bg="white").pack()
+
+# Custom hex color
+LogoWidget(root, bg="#2b2b2b").pack()
+```
+
+## Pass Additional Frame Options
+
+All extra keyword arguments are passed through to `tk.Frame`:
+
+```python
+LogoWidget(root, bg="white", padx=10, pady=10, relief="raised", borderwidth=2).pack()
+```
 
 ## Change Image
 
-1. Download the image (with the author's permission), **as a `.gif` file.**
-2. Save the image to the `imgs` folder in your program's root directory.
-3. Open the respective Python file.
-4. Navigate to the line beginning with `img`.
-5. Edit the text between the `file = " "` with the new path to the image.
-6. Save and run the program (`F5`).
+To use a custom image, subclass the widget and override the image path:
 
-## Change Image Style
+```python
+import tkinter as tk
+from python_logo_widgets.widgets import _load_image
 
-1. Open the respective Python file.
-2. Navigate to the line beginning with `label`.
-3. Edit the text between the `bg = " "` with a different image background color.
-4. _Optional:_ Add other customization options found in the [Python `Tkinter` docs](https://docs.python.org/3/library/tkinter.html#).
-5. Save and run the program (`F5`).
+class CustomLogoWidget(tk.Frame):
+    def __init__(self, parent, bg="black", **kwargs):
+        super().__init__(parent, **kwargs)
+        self._image = tk.PhotoImage(file="path/to/your/image.gif")
+        self._label = tk.Label(self, image=self._image, bg=bg)
+        self._label.pack(fill=tk.BOTH, expand=True)
+```
+
+**Note:** `tkinter.PhotoImage` supports `.gif` and `.png` formats.

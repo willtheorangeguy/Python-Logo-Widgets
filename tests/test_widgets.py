@@ -3,8 +3,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
 
-from python_logo_widgets import LogoWidget, PoweredByLengthWidget, PoweredByWidthWidget
-
 
 class TestLogoWidget(unittest.TestCase):
     """Test LogoWidget instantiation and behavior."""
@@ -14,6 +12,8 @@ class TestLogoWidget(unittest.TestCase):
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
     def test_creates_with_parent(self, mock_load, mock_photo, _mock_label):
         """Test widget creation with a parent."""
+        from python_logo_widgets import LogoWidget  # pylint: disable=import-outside-toplevel
+
         parent = MagicMock()
         widget = LogoWidget(parent)
         mock_load.assert_called_once_with("logo.gif")
@@ -25,6 +25,8 @@ class TestLogoWidget(unittest.TestCase):
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
     def test_custom_bg(self, _mock_load, _mock_photo, mock_label):
         """Test custom background propagation."""
+        from python_logo_widgets import LogoWidget  # pylint: disable=import-outside-toplevel
+
         parent = MagicMock()
         LogoWidget(parent, bg="white")
         mock_label.assert_called_once()
@@ -40,6 +42,8 @@ class TestPoweredByLengthWidget(unittest.TestCase):
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
     def test_creates_with_parent(self, mock_load, _mock_photo, _mock_label):
         """Test powered-by-length widget creation with a parent."""
+        from python_logo_widgets import PoweredByLengthWidget  # pylint: disable=import-outside-toplevel
+
         parent = MagicMock()
         widget = PoweredByLengthWidget(parent)
         mock_load.assert_called_once_with("length.gif")
@@ -54,6 +58,8 @@ class TestPoweredByWidthWidget(unittest.TestCase):
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
     def test_creates_with_parent(self, mock_load, _mock_photo, _mock_label):
         """Test powered-by-width widget creation with a parent."""
+        from python_logo_widgets import PoweredByWidthWidget  # pylint: disable=import-outside-toplevel
+
         parent = MagicMock()
         widget = PoweredByWidthWidget(parent)
         mock_load.assert_called_once_with("width.gif")

@@ -3,6 +3,8 @@
 import unittest
 from unittest.mock import patch, MagicMock
 
+from python_logo_widgets import LogoWidget, PoweredByLengthWidget, PoweredByWidthWidget
+
 
 class TestLogoWidget(unittest.TestCase):
     """Test LogoWidget instantiation and behavior."""
@@ -10,21 +12,19 @@ class TestLogoWidget(unittest.TestCase):
     @patch("python_logo_widgets.widgets.tk.Label")
     @patch("python_logo_widgets.widgets.tk.PhotoImage")
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
-    def test_creates_with_parent(self, mock_load, mock_photo, mock_label):
-        from python_logo_widgets import LogoWidget
-
+    def test_creates_with_parent(self, mock_load, mock_photo, _mock_label):
+        """Test widget creation with a parent."""
         parent = MagicMock()
         widget = LogoWidget(parent)
         mock_load.assert_called_once_with("logo.gif")
         mock_photo.assert_called_once_with(file="fake.gif")
-        self.assertIsNotNone(widget._image)
+        self.assertIsNotNone(getattr(widget, "_image"))
 
     @patch("python_logo_widgets.widgets.tk.Label")
     @patch("python_logo_widgets.widgets.tk.PhotoImage")
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
-    def test_custom_bg(self, mock_load, mock_photo, mock_label):
-        from python_logo_widgets import LogoWidget
-
+    def test_custom_bg(self, _mock_load, _mock_photo, mock_label):
+        """Test custom background propagation."""
         parent = MagicMock()
         LogoWidget(parent, bg="white")
         mock_label.assert_called_once()
@@ -38,13 +38,12 @@ class TestPoweredByLengthWidget(unittest.TestCase):
     @patch("python_logo_widgets.widgets.tk.Label")
     @patch("python_logo_widgets.widgets.tk.PhotoImage")
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
-    def test_creates_with_parent(self, mock_load, mock_photo, mock_label):
-        from python_logo_widgets import PoweredByLengthWidget
-
+    def test_creates_with_parent(self, mock_load, _mock_photo, _mock_label):
+        """Test powered-by-length widget creation with a parent."""
         parent = MagicMock()
         widget = PoweredByLengthWidget(parent)
         mock_load.assert_called_once_with("length.gif")
-        self.assertIsNotNone(widget._image)
+        self.assertIsNotNone(getattr(widget, "_image"))
 
 
 class TestPoweredByWidthWidget(unittest.TestCase):
@@ -53,13 +52,12 @@ class TestPoweredByWidthWidget(unittest.TestCase):
     @patch("python_logo_widgets.widgets.tk.Label")
     @patch("python_logo_widgets.widgets.tk.PhotoImage")
     @patch("python_logo_widgets.widgets._load_image", return_value="fake.gif")
-    def test_creates_with_parent(self, mock_load, mock_photo, mock_label):
-        from python_logo_widgets import PoweredByWidthWidget
-
+    def test_creates_with_parent(self, mock_load, _mock_photo, _mock_label):
+        """Test powered-by-width widget creation with a parent."""
         parent = MagicMock()
         widget = PoweredByWidthWidget(parent)
         mock_load.assert_called_once_with("width.gif")
-        self.assertIsNotNone(widget._image)
+        self.assertIsNotNone(getattr(widget, "_image"))
 
 
 if __name__ == "__main__":

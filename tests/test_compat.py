@@ -3,6 +3,9 @@
 import unittest
 from unittest.mock import patch, MagicMock
 
+from python_logo_widgets._compat import logo_widget, length_widget, width_widget
+from python_logo_widgets._demo import demo
+
 
 class TestCompatFunctions(unittest.TestCase):
     """Test that legacy wrapper functions create root and call mainloop."""
@@ -10,8 +13,7 @@ class TestCompatFunctions(unittest.TestCase):
     @patch("python_logo_widgets._compat.LogoWidget")
     @patch("python_logo_widgets._compat.tk.Tk")
     def test_logo_widget(self, mock_tk, mock_cls):
-        from python_logo_widgets._compat import logo_widget
-
+        """Test the logo compatibility wrapper."""
         mock_root = MagicMock()
         mock_tk.return_value = mock_root
         logo_widget()
@@ -22,8 +24,7 @@ class TestCompatFunctions(unittest.TestCase):
     @patch("python_logo_widgets._compat.PoweredByLengthWidget")
     @patch("python_logo_widgets._compat.tk.Tk")
     def test_length_widget(self, mock_tk, mock_cls):
-        from python_logo_widgets._compat import length_widget
-
+        """Test the length compatibility wrapper."""
         mock_root = MagicMock()
         mock_tk.return_value = mock_root
         length_widget()
@@ -34,8 +35,7 @@ class TestCompatFunctions(unittest.TestCase):
     @patch("python_logo_widgets._compat.PoweredByWidthWidget")
     @patch("python_logo_widgets._compat.tk.Tk")
     def test_width_widget(self, mock_tk, mock_cls):
-        from python_logo_widgets._compat import width_widget
-
+        """Test the width compatibility wrapper."""
         mock_root = MagicMock()
         mock_tk.return_value = mock_root
         width_widget()
@@ -52,8 +52,7 @@ class TestDemo(unittest.TestCase):
     @patch("python_logo_widgets._demo.LogoWidget")
     @patch("python_logo_widgets._demo.tk.Tk")
     def test_demo_creates_all_widgets(self, mock_tk, mock_logo, mock_length, mock_width):
-        from python_logo_widgets._demo import demo
-
+        """Test the demo launcher creates all widgets."""
         mock_root = MagicMock()
         mock_tk.return_value = mock_root
         demo()

@@ -11,9 +11,9 @@ class TestCompatFunctions(unittest.TestCase):
     @patch("python_logo_widgets._compat.tk.Tk")
     def test_logo_widget(self, mock_tk, mock_cls):
         """Test the logo compatibility wrapper."""
-        from python_logo_widgets._compat import (
+        from python_logo_widgets._compat import (  # pylint: disable=import-outside-toplevel
             logo_widget,
-        )  # pylint: disable=import-outside-toplevel
+        )
 
         mock_root = MagicMock()
         mock_tk.return_value = mock_root
@@ -26,9 +26,9 @@ class TestCompatFunctions(unittest.TestCase):
     @patch("python_logo_widgets._compat.tk.Tk")
     def test_length_widget(self, mock_tk, mock_cls):
         """Test the length compatibility wrapper."""
-        from python_logo_widgets._compat import (
+        from python_logo_widgets._compat import (  # pylint: disable=import-outside-toplevel
             length_widget,
-        )  # pylint: disable=import-outside-toplevel
+        )
 
         mock_root = MagicMock()
         mock_tk.return_value = mock_root
@@ -41,9 +41,9 @@ class TestCompatFunctions(unittest.TestCase):
     @patch("python_logo_widgets._compat.tk.Tk")
     def test_width_widget(self, mock_tk, mock_cls):
         """Test the width compatibility wrapper."""
-        from python_logo_widgets._compat import (
+        from python_logo_widgets._compat import (  # pylint: disable=import-outside-toplevel
             width_widget,
-        )  # pylint: disable=import-outside-toplevel
+        )
 
         mock_root = MagicMock()
         mock_tk.return_value = mock_root
@@ -64,9 +64,9 @@ class TestDemo(unittest.TestCase):
         self, mock_tk, mock_logo, mock_length, mock_width
     ):
         """Test the demo launcher creates all widgets."""
-        from python_logo_widgets._demo import (
+        from python_logo_widgets._demo import (  # pylint: disable=import-outside-toplevel
             demo,
-        )  # pylint: disable=import-outside-toplevel
+        )
 
         mock_root = MagicMock()
         mock_tk.return_value = mock_root

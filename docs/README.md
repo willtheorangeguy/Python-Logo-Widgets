@@ -27,7 +27,7 @@ python_logo_widgets/
 
 ## Before you redistribute this
 
-The images are **PSF trademarks**, not GPL-licensed content.
+⚠️ **The images are PSF property, not GPL-licensed content.**
 
 The repository's `LICENSE.md` is GPL v3, which grants recipients the right to modify and
 redistribute everything it covers. The Python logo and the "Python Powered" badges are trademarks
@@ -38,8 +38,12 @@ to place under GPL, and the policy restricts modifying them in ways the GPL expl
 Using the badges to indicate that your software is built with Python is the use the PSF intends.
 Treating the image files as GPL content you may alter and redistribute is not.
 
-Recorded in [`internal/known-issues.md`](./internal/known-issues.md) as needing an owner
-decision. Nothing here has been changed.
+**The position, decided:** the repository's licence stays GPL v3 for the code, and the images
+carry the PSF's own terms. The README states the split, and this page and the
+[FAQ](./faq.md) repeat it, so nobody has to infer it from a licence file that does not mention
+the marks.
+
+Recorded in [`internal/known-issues.md`](./internal/known-issues.md) for the record.
 
 ## The legal documents
 

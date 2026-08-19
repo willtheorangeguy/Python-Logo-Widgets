@@ -12,12 +12,16 @@ to them.
 
 ### The repository is GPL. Does that cover the images?
 
-No, and that is the problem recorded in
-[`internal/known-issues.md`](./internal/known-issues.md). `LICENSE.md` is GPL v3, which grants
-recipients the right to modify and redistribute what it covers; the logo and badges are PSF
-trademarks that the author is not in a position to license that way.
+**No.** `LICENSE.md` is GPL v3 and covers the code. The Python logo and the "Python Powered"
+badges are copyright and trademarks of the Python Software Foundation, included here under the
+PSF's [Trademark Usage Policy](https://www.python.org/psf/trademarks/) — which is what governs
+them.
 
-The code is GPL. The images are the PSF's, under the PSF's terms. The README now says so.
+So: the GPL's permission to modify and redistribute applies to the source, not to the marks.
+Display them; do not alter them or ship altered versions.
+
+The licence file is deliberately left as it is; the split is stated in the README, the
+[documentation index](./README.md), and here.
 
 ### Why is there a privacy policy?
 

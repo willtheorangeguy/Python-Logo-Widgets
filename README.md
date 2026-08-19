@@ -112,8 +112,10 @@ Sponsor [@willtheorangeguy](https://github.com/willtheorangeguy) on [PayPal](htt
 
 ## License
 
-The **code** is licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html) — see [`LICENSE.md`](LICENSE.md).
+The **code** in this repository is licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html) — see [`LICENSE.md`](LICENSE.md).
 
-The **images** are the Python logo and the "Python Powered" badges, which are trademarks of the [Python Software Foundation](https://www.python.org/psf/trademarks/) and are not the author's to license. Their use is governed by the PSF Trademark Usage Policy, not by the licence above — see [`docs/internal/known-issues.md`](docs/internal/known-issues.md), which records this as needing a decision.
+> ⚠️ **The bundled images are not covered by that licence.** The Python logo and the "Python Powered" badges are copyright and trademarks of the [Python Software Foundation](https://www.python.org/psf/trademarks/). They are included here under the PSF's [Trademark Usage Policy](https://www.python.org/psf/trademarks/), which is what governs their use — not the GPL.
+>
+> In practice: displaying the badges to show your software is built with Python is the use the PSF intends and this package makes convenient. **Modifying the marks, or redistributing altered versions, is not permitted**, whatever rights the GPL would otherwise grant over files in this repository.
 
 [Privacy Policy](docs/legal/privacy.md) · [Terms and Conditions](docs/legal/terms.md)

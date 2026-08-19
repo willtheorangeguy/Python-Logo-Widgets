@@ -1,144 +1,90 @@
 <!-- Logo -->
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/logo.png" height="300px" width="350px" alt="Python Logo Widgets">
+  <img src="https://raw.githubusercontent.com/willtheorangeguy/.github/main/icons/Python-Logo-Widgets/logo.png" height="250px" width="400px" alt="Python Logo Widgets">
   <br>
   Python Logo Widgets
   <br>
 </h1>
 
 <!-- Copy -->
-<h4 align="center">A group of widgets showing the Python logos, that can easily be added to your Python GUI code!</h4>
+<h4 align="center">Drop-in Tkinter widgets for the Python logo and the "Python Powered" badges.</h4>
 
 <!-- Badges -->
 <div align="center">
-  <!-- Stability -->
-  <img alt="PyPI Build State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/push-to-pypi.yml/badge.svg">
-  <!-- Stability -->
-  <img alt="PyTest State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pytest.yml/badge.svg">
-  <!-- Stability -->
-  <img alt="Pylint State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/pylint.yml/badge.svg">
-  <!-- CodeQL -->
-  <img alt="CodeQL State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/codeql.yml/badge.svg">
-  <!-- Gitleaks -->
-  <img alt="Gitleaks State" src="https://github.com/willtheorangeguy/Python-Logo-Widgets/actions/workflows/gitleaks.yml/badge.svg">
-  <!-- Version -->
-  <img alt="GitHub Version" src="https://img.shields.io/github/v/release/willtheorangeguy/Python-Logo-Widgets">
-  <!-- Issues -->
+  <img alt="GitHub Version" src="https://img.shields.io/github/v/release/willtheorangeguy/Python-Logo-Widgets?include_prereleases">
   <img alt="GitHub Issues" src="https://img.shields.io/github/issues/willtheorangeguy/Python-Logo-Widgets">
-  <!-- Pull Requests -->
   <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/willtheorangeguy/Python-Logo-Widgets">
-  <!-- Discord -->
-  <img alt="Discord Server ID" src="https://img.shields.io/discord/960705680174633021">
-  <!-- Downloads -->
-  <img alt="Downloads" src="https://img.shields.io/github/downloads/willtheorangeguy/Python-Logo-Widgets/total">
-  <!-- Language Count -->
-  <img alt="GitHub Languages" src="https://img.shields.io/github/languages/count/willtheorangeguy/Python-Logo-Widgets">
+  <img alt="License" src="https://img.shields.io/github/license/willtheorangeguy/Python-Logo-Widgets">
 </div>
 
 <!-- Navigation -->
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#download">Download</a> •
-  <a href="#how-to-use">How To Use</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#documentation">Documentation</a> •
   <a href="#support">Support</a> •
   <a href="#contributing">Contributing</a> •
-  <a href="#changelog">Changelog</a> •
-  <a href="#credits">Credits & Contributors</a>
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
 </p>
 
 <!-- Screenshot(s) -->
 <div align="center">
-  <img alt="Python Logo Widget" src="https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonlogo.png">
-  <img alt="Python Powered Height Widget" src="https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonpoweredheight.png">
-  <img alt="Python Powered Width Widget" src="https://raw.githubusercontent.com/willtheorangeguy/Python-Logo-Widgets/master/docs/images/pythonpoweredwidth.png">
+  <img alt="Python Logo Widget" src="https://raw.githubusercontent.com/willtheorangeguy/.github/main/icons/Python-Logo-Widgets/pythonlogo.png">
+  <img alt="Python Powered Height Widget" src="https://raw.githubusercontent.com/willtheorangeguy/.github/main/icons/Python-Logo-Widgets/pythonpoweredheight.png">
+  <img alt="Python Powered Width Widget" src="https://raw.githubusercontent.com/willtheorangeguy/.github/main/icons/Python-Logo-Widgets/pythonpoweredwidth.png">
 </div>
 
 ## Key Features
 
-* High quality images.
-* Easy to integrate into a `Tkinter` GUI project.
-* Embeddable `tkinter.Frame` widgets — use them in your own windows.
-* Standalone demo mode.
-* Installable via `pip`.
-* Cross platform.
+- Three embeddable `tkinter.Frame` subclasses — put them straight into your own windows.
+- Images bundled with the package and resolved through `importlib.resources`, so they work however you install it.
+- Each widget keeps its own image reference, so nothing renders blank.
+- A standalone demo, and backward-compatible wrappers for the original function API.
+- Pure standard library — Tkinter only.
+- Cross-platform.
 
-## Download
-
-You can **[download](https://github.com/willtheorangeguy/Python-Logo-Widgets/releases/latest) the source code** to run the scripts from the command line on Windows, macOS and Linux. **This will require [Python](https://www.python.org/downloads/).**
-
-## How To Use
-
-### Install
+## Installation
 
 ```bash
 pip install Python-Logo-Widgets
 ```
 
-### Embed in Your Application
+## Usage
 
 ```python
 import tkinter as tk
-from python_logo_widgets import LogoWidget, PoweredByLengthWidget, PoweredByWidthWidget
+from python_logo_widgets import LogoWidget, PoweredByWidthWidget
 
 root = tk.Tk()
-root.title("My App")
-
-# Add any combination of widgets to your window
 LogoWidget(root, bg="white").pack(pady=10)
 PoweredByWidthWidget(root).pack(side=tk.BOTTOM)
-
 root.mainloop()
 ```
 
-Available widgets:
-
-| Widget Class | Image |
+| Widget | Image |
 |---|---|
-| `LogoWidget` | Python logo |
-| `PoweredByLengthWidget` | "Python Powered" tall badge |
-| `PoweredByWidthWidget` | "Python Powered" wide badge |
+| `LogoWidget` | The Python logo |
+| `PoweredByLengthWidget` | "Python Powered", tall |
+| `PoweredByWidthWidget` | "Python Powered", wide |
 
-Each widget accepts a `parent` widget and an optional `bg` parameter (default `"black"`).
+Each takes a parent and an optional `bg` (default `"black"`). Demo: `python-logo-widgets` or `python -m python_logo_widgets`.
 
-### Run the Demo
+## Documentation
 
-```bash
-# Via the command line entry point
-python-logo-widgets
-
-# Or as a module
-python -m python_logo_widgets
-```
-
-### Git (Development)
-
-```bash
-# Clone this repository
-$ git clone https://github.com/willtheorangeguy/Python-Logo-Widgets
-
-# Go into the repository
-$ cd Python-Logo-Widgets
-
-# Install in development mode
-$ pip install -e .
-
-# Run the demo
-$ python -m python_logo_widgets
-```
+Full documentation lives in [`docs/`](docs/README.md):
+[Quickstart](docs/quickstart.md) · [Installation](docs/installation.md) · [Configuration](docs/configuration.md) · [Architecture](docs/architecture.md) · [API](docs/api.md) · [Development](docs/development.md) · [FAQ](docs/faq.md) · [Troubleshooting](docs/troubleshooting.md) · [Roadmap](docs/roadmap.md)
 
 ## Support
 
-Customizing the logo and widget sizes can be found in [`CUSTOMIZATION`](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/CUSTOMIZATION.md). Hard-coding the widgets into your project can be found in [`USAGE`](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/USAGE.md). More documentation is available in the **[Documentation](https://github.com/willtheorangeguy/Python-Logo-Widgets/tree/main/docs)** and on the **[Wiki](https://github.com/willtheorangeguy/Python-Logo-Widgets/wiki)**. If more support is required, please open a **[GitHub Discussion](https://github.com/willtheorangeguy/Python-Logo-Widgets/discussions/new)** or join our **[Discord](https://discord.gg/eAZZJzhHrW)**.
+Open a [GitHub Discussion](https://github.com/willtheorangeguy/Python-Logo-Widgets/discussions/new), file an [issue](https://github.com/willtheorangeguy/Python-Logo-Widgets/issues/new/choose), or join the [Discord](https://discord.gg/eAZZJzhHrW).
 
 ## Contributing
 
 Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/willtheorangeguy/Python-Logo-Widgets/compare).
 
-Please read [`CONTRIBUTING`](https://github.com/willtheorangeguy/.github/blob/main/CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](https://github.com/willtheorangeguy/.github/blob/main/CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
-
-## Changelog
-
-See the [`CHANGELOG`](CHANGELOG.md) file for details.
+See the org-wide [Contributing Guide](https://github.com/willtheorangeguy/.github/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/willtheorangeguy/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ## Credits
 
@@ -162,16 +108,12 @@ This software uses the following open source packages, projects, services or web
     <td align="center"><a href="https://pyinstaller.readthedocs.io/en/stable/">Web</a> - <a href="https://www.pyinstaller.org/funding.html#funding-by-individuals">Donate</a></td>
 </table>
 
-## Contributors
-
-* [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
-
-## You may also like...
-
-* [Running Calculator](https://github.com/willtheorangeguy/Running-Calculator) - A running speed calculator for any unit of distance.
-* [PyWorkout](https://github.com/willtheorangeguy/PyWorkout) - A minimal CLI to keep you inspired during your workout!
-* [PyAvatar](https://github.com/willtheorangeguy/PyAvatar) - Easily display all of your creative avatars to keep them consistent across websites.
+Sponsor [@willtheorangeguy](https://github.com/willtheorangeguy) on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US).
 
 ## License
 
-This project is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html) - see the [`LICENSE`](LICENSE.md) file for details. See the [Privacy Policy](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/legal/PRIVACY.md) and [Terms and Conditions](https://github.com/willtheorangeguy/Python-Logo-Widgets/blob/master/docs/legal/TERMS.md) for legal information.
+The **code** is licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html) — see [`LICENSE.md`](LICENSE.md).
+
+The **images** are the Python logo and the "Python Powered" badges, which are trademarks of the [Python Software Foundation](https://www.python.org/psf/trademarks/) and are not the author's to license. Their use is governed by the PSF Trademark Usage Policy, not by the licence above — see [`docs/internal/known-issues.md`](docs/internal/known-issues.md), which records this as needing a decision.
+
+[Privacy Policy](docs/legal/privacy.md) · [Terms and Conditions](docs/legal/terms.md)

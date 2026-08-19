@@ -8,12 +8,14 @@ Direction, not a schedule. Defects are in
 Three embeddable widgets, images bundled and resolved correctly, references held properly, the
 original function API preserved, and tests for both. It does what it says.
 
-## Considered
+## Settled
 
-**Settling the licence position on the images.** The most important item, and it is a decision
-rather than a code change: the repository is GPL v3, and the logo and badges are PSF trademarks
-that cannot be relicensed that way. Stating the split explicitly — code GPL, marks PSF — is the
-minimum; the README now does, and the repository's own licensing should follow.
+**The licence position on the images.** The repository stays GPL v3 for the code, with the Python
+logo and "Python Powered" badges carrying the PSF's own copyright and trademark terms. That split
+is now stated in the README, the documentation index, and the FAQ rather than left to be inferred
+from a licence file that does not mention the marks.
+
+## Considered
 
 **Replacing the boilerplate legal documents.** A privacy policy describing account creation and
 personal data collection, for a package that opens no connection, is worse than none — it implies

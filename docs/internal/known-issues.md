@@ -8,20 +8,9 @@ Ordered by severity. See [`docs/roadmap.md`](../roadmap.md) for the narrative ve
 which also covers deliberate non-goals.
 
 
-**3 open:** 1 high, 1 medium, 1 low.
+**3 open:** 1 medium, 2 low.
 
-## 1. GPL v3 is asserted over the Python logo and Python Powered badges, which are PSF trademarks
-
-**Severity:** High  
-**Where:** `LICENSE.md`, `README.md` (qualified in this pass), `python_logo_widgets/imgs/*.gif`
-
-**What:** `LICENSE.md` is the GNU GPL v3, and the README stated 'This project is licensed under the [GNU General Public License]' with no carve-out. The three bundled GIFs are the Python logo and the two 'Python Powered' badges -- trademarks of the Python Software Foundation, governed by the [PSF Trademark Usage Policy](https://www.python.org/psf/trademarks/). The package is published to PyPI as `Python-Logo-Widgets`, so the images are redistributed with it. The credits table names the PSF, but as a project credit rather than as a rights holder.
-
-**Why it matters:** The GPL grants every recipient the right to modify and redistribute what it covers -- which is precisely what a trademark policy restricts, and which the author is not in a position to grant over someone else's marks. Anyone taking the licence at face value could reasonably conclude they may alter the Python logo and ship the result, which the PSF policy does not permit. This is the one repository in the sweep whose *entire content* is third-party trademarked artwork, so the mismatch is not a corner case -- it is the whole package.
-
-**Suggested fix:** Owner's decision, not a documentation change. Options: state the split explicitly in `LICENSE.md` (code GPL v3, images PSF trademarks under the PSF policy, redistributed under the nominative use the badges are intended for); add a `NOTICE` or `CONTENT_LICENSE.md` recording the PSF's terms; or replace the bundled marks with the author's own artwork and reference the official badges by URL. The README is qualified in this pass; the licence file itself is untouched.
-
-## 2. The privacy policy and terms describe a service this package is not
+## 1. The privacy policy and terms describe a service this package is not
 
 **Severity:** Medium  
 **Where:** `docs/legal/PRIVACY.md`, `docs/legal/TERMS.md`
@@ -31,6 +20,17 @@ which also covers deliberate non-goals.
 **Why it matters:** A privacy policy is a statement about data handling, and this one asserts handling that does not occur -- accounts, personal data, disclosure to affiliates. That is misleading in the direction people do not expect documents to be misleading: it makes a package that collects nothing look like one that collects something, and a reader doing due diligence on dependencies has to read seventy lines of source to establish that the legal document is wrong about its own subject. Boilerplate is worse than absence here.
 
 **Suggested fix:** Delete both, or replace them with two sentences: this package collects no data, makes no network requests, and writes nothing to disk. If terms are wanted for the PyPI listing, they should describe a library rather than a Service with Accounts.
+
+## 2. The GPL licence file does not mention the PSF marks it ships alongside
+
+**Severity:** Low  
+**Where:** `LICENSE.md`, `README.md` (warning added in this pass), `python_logo_widgets/imgs/*.gif`
+
+**What:** `LICENSE.md` is the GNU GPL v3 with no carve-out, and the three bundled GIFs are the Python logo and the two 'Python Powered' badges -- copyright and trademarks of the Python Software Foundation, governed by the [PSF Trademark Usage Policy](https://www.python.org/psf/trademarks/). The package is published to PyPI, so the images are redistributed with it. Read alone, the licence file implies the GPL's modify-and-redistribute permission extends to the marks; it does not.
+
+**Why it matters:** **Resolved -- the owner has decided the licence stays as it is, with a warning added instead.** The remaining exposure is that `LICENSE.md` is the file a redistributor reads first and it still says nothing about the marks, so the correction lives only in the README and these docs. That is a documentation-shaped mitigation for a licence-shaped ambiguity, which is why this stays on the list rather than being closed outright.
+
+**Suggested fix:** Done in this pass: the README carries a prominent warning that the images are PSF property and not covered by the GPL, repeated in the documentation index and the FAQ. If it ever becomes worth strengthening, a short `NOTICE` file beside `LICENSE.md` -- naming the marks, the PSF, and the trademark policy -- would put the same statement where a redistributor actually looks, without altering the licence itself.
 
 ## 3. str(files(...)) assumes a filesystem path, so the package breaks when zipped
 

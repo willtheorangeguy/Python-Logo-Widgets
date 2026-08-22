@@ -2,7 +2,7 @@
 
 Seventy lines of implementation, and two details that make it work.
 
-```
+```text
 python_logo_widgets/
 ├── widgets.py    three tk.Frame subclasses
 ├── _compat.py    the original function API, wrapping the classes

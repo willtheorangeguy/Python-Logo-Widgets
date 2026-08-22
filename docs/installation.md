@@ -47,7 +47,7 @@ from python_logo_widgets import LogoWidget, PoweredByLengthWidget, PoweredByWidt
 
 ## Adding it to your project
 
-```
+```text
 python-logo-widgets
 ```
 

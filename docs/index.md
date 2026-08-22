@@ -3,7 +3,7 @@
 Three Tkinter `Frame` subclasses that display the Python logo and the "Python Powered" badges,
 with the images bundled so you do not have to ship them yourself.
 
-```
+```text
 python_logo_widgets/
 ├── widgets.py     LogoWidget, PoweredByLengthWidget, PoweredByWidthWidget
 ├── _compat.py     the original function API, kept working

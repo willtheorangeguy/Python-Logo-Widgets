@@ -7,12 +7,11 @@ licensing decision rather than a documentation one.
 Ordered by severity. See [`docs/roadmap.md`](../roadmap.md) for the narrative version,
 which also covers deliberate non-goals.
 
-
 **3 open:** 1 medium, 2 low.
 
 ## 1. The privacy policy and terms describe a service this package is not
 
-**Severity:** Medium  
+**Severity:** Medium
 **Where:** `docs/legal/PRIVACY.md`, `docs/legal/TERMS.md`
 
 **What:** Both are generated boilerplate dated 29 August 2022. `PRIVACY.md` opens 'This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service' and defines Account, Affiliate, and Personal Data. The package is an offline Tkinter widget library: it opens no network connection, creates no account, stores nothing, and reads only three GIFs from inside its own installation. The README links both from its License section.
@@ -23,7 +22,7 @@ which also covers deliberate non-goals.
 
 ## 2. The GPL licence file does not mention the PSF marks it ships alongside
 
-**Severity:** Low  
+**Severity:** Low
 **Where:** `LICENSE.md`, `README.md` (warning added in this pass), `python_logo_widgets/imgs/*.gif`
 
 **What:** `LICENSE.md` is the GNU GPL v3 with no carve-out, and the three bundled GIFs are the Python logo and the two 'Python Powered' badges -- copyright and trademarks of the Python Software Foundation, governed by the [PSF Trademark Usage Policy](https://www.python.org/psf/trademarks/). The package is published to PyPI, so the images are redistributed with it. Read alone, the licence file implies the GPL's modify-and-redistribute permission extends to the marks; it does not.
@@ -34,7 +33,7 @@ which also covers deliberate non-goals.
 
 ## 3. str(files(...)) assumes a filesystem path, so the package breaks when zipped
 
-**Severity:** Low  
+**Severity:** Low
 **Where:** `python_logo_widgets/widgets.py` -> `_load_image`
 
 **What:** `_load_image` returns `str(files("python_logo_widgets.imgs").joinpath(image_name))` and hands the result to `tk.PhotoImage(file=...)`. `files()` returns a `Traversable`, which only has a real filesystem path when the package is installed unzipped. For a zipimported package -- a zipapp, some frozen builds, an egg -- `str()` produces something that is not a readable path and `PhotoImage` fails.
@@ -47,7 +46,6 @@ which also covers deliberate non-goals.
         image = tk.PhotoImage(file=str(path))
 
 The `PhotoImage` must be constructed inside the block, since the temporary file may be removed on exit.
-
 
 ---
 

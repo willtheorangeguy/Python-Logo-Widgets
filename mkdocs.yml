@@ -1,0 +1,37 @@
+# Documentation configuration for Python-Logo-Widgets.
+
+INHERIT: .mkdocs-shared/shared/mkdocs.base.yml
+
+site_name: 'Python Logo Widgets'
+site_description: 'A group of widgets showing the Python logos, that can easily be added to your Python GUI code!'
+site_author: willtheorangeguy
+site_url: https://williamvdg.me/Python-Logo-Widgets/
+
+repo_url: https://github.com/willtheorangeguy/Python-Logo-Widgets
+repo_name: willtheorangeguy/Python-Logo-Widgets
+edit_uri: edit/master/docs/
+
+copyright: Copyright &copy; willtheorangeguy
+
+nav:
+  - Home: index.md
+  - 'Quickstart': 'quickstart.md'
+  - 'Installation': 'installation.md'
+  - 'Configuration': 'configuration.md'
+  - 'Architecture': 'architecture.md'
+  - 'API': 'api.md'
+  - 'Development': 'development.md'
+  - 'FAQ': 'faq.md'
+  - 'Troubleshooting': 'troubleshooting.md'
+  - 'Roadmap': 'roadmap.md'
+  - 'Python-Logo-Widgets': 'internal/known-issues.md'
+  - 'Privacy Policy': 'legal/privacy.md'
+  - 'Terms and Conditions': 'legal/terms.md'
+  - Changelog: changelog.md
+  - License: license.md
+  - Contributing: https://github.com/willtheorangeguy/.github/blob/main/CONTRIBUTING.md
+  - Code of Conduct: https://github.com/willtheorangeguy/.github/blob/main/CODE_OF_CONDUCT.md
+  - Security: https://github.com/willtheorangeguy/.github/blob/main/SECURITY.md
+
+exclude_docs: |
+  docs.instructions.md
